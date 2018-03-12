@@ -1,0 +1,593 @@
+/* @override 
+	http://rouxconf.com/_/css/style.css */
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}									
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+
+html {overflow-y: scroll;}
+
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+ 
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+button, input, select, textarea {margin: 0;}
+
+button {width: auto; overflow: visible;}
+
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+
+/* MyStuff
+-------------------------------------------------------------------------------*/
+
+
+.group:before, .group:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.group:after { clear: both; }  
+.group { zoom: 1; }  
+
+
+
+body {
+	background: #495B95 url(../../images/background_buildings.png) repeat-x;
+	font: Normal 100% 'Droid Serif', serif;
+	width: 100%;
+}
+
+header {
+	height:200px;
+	background: #000;
+	color: #FFF;
+	position: relative;
+}
+
+.wrapper {
+	width:1000px;
+	background: #FFF ;
+	margin:0 auto;
+	margin-top:30px;
+	position: relative;
+	padding-bottom:200px;
+}
+
+header #branding {
+	position: relative;
+	top: 30px;
+	left: 30px;
+	width: 240px;
+}
+
+header .description {
+	width:550px;
+	position: absolute;
+	top: 20px;
+	left: 380px;
+	font: normal .9em 'Droid Sans';
+}
+
+header .description h1 {
+	font: normal 1.8em 'Droid Serif', serif;
+	padding-bottom: 5px;
+}
+
+.highlight {
+	color: #b20000;
+}
+
+h2 {
+	font: bold 1.5em "Droid Serif", serif;
+	margin-bottom:10px;
+	padding-top:20px;
+	color: #b20000;
+}	
+
+h3 {
+	color: #BA7415;
+}
+
+
+/* Header --------------------- */
+header nav {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	background: #FEAB34;
+	text-transform: uppercase;
+}
+
+header nav li {
+	list-style: none;
+	display: inline;
+}
+
+header nav li a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	font: normal 1.1em 'Droid Sans';
+	color: #000;
+	padding: 10px 30px 10px 30px;
+}
+
+header nav li a:hover {
+	background: #F2C348;
+	color: black;
+}
+
+
+/* Footer --------------------- */
+
+footer {
+	position: absolute;
+	background: #333333;
+	width:100%;
+	height: 115px;
+	bottom: 0px;
+	color: white;
+}
+
+footer .branding {
+	position: absolute;
+	left:40px;
+	top: 20px;
+}
+
+footer .branding img {
+	width:80px;
+}
+
+footer .description {
+	position: absolute;
+	left:140px;
+	top: 20px;
+	width:280px;
+	font: normal .9em 'Droid Sans';
+}
+
+/* Footer Nav
+-------------------------------------------------------------------------------*/
+footer {
+	color: white;
+	position: absolute;
+}
+
+footer nav {
+	position: relative;
+		left:480px;
+		top:20px;
+}
+
+footer nav li {
+	display: block;
+	list-style: none;
+}
+
+footer nav li a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	font: normal .9em 'Droid Sans';
+	color: #FFF;
+	padding: 0px 10px;
+	border-right: 1px solid #ddd;
+}
+
+footer nav li:last-child a {
+	border-right: none;
+}
+
+/* Content
+-------------------------------------------------------------------------------*/
+
+/* Main
+-------------------------------------------------------------------------------*/
+#main {
+	width:630px;
+	float: left;
+	display: block;
+	margin:30px 0;
+}
+
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6, #main p {
+	margin:0 70px;
+} 
+
+#main article:nth-of-type(1) h2 {
+	padding-top: 0;
+}
+
+#main p {
+	font: normal 1em/1.6em "Droid Sans", sans-serif;
+	margin-bottom:10px;
+}
+
+/* Sidebar
+-------------------------------------------------------------------------------*/
+#sidebar {
+	width:370px;
+	float: left;
+	margin:30px 0;
+}
+
+#sidebar h1, #sidebar h2, #sidebar h3, #sidebar h4, #sidebar h5, #sidebar p {
+	padding-right:80px;
+} 
+
+#sidebar h2 {
+	margin-bottom:5px;
+}
+
+#sidebar article:nth-of-type(1) h2 {
+	padding-top: 0;
+	margin-bottom:0px;
+}
+
+#sidebar h3 {
+	margin-bottom:3px;
+}
+
+#sidebar p {
+	font: normal 1em/1.6em "Droid Sans", sans-serif;
+	margin-bottom:10px;
+	padding-right: 60px;
+}
+
+#sidebar img {
+	max-width: 100%
+}
+
+/* Links
+-------------------------------------------------------------------------------*/
+
+a.link {
+	display: block;
+	text-align: right;
+	color: #333;
+}
+
+a:hover.link {
+	color: #777;
+}
+
+a.link:after {
+	content: ' »';
+}
+
+
+/* Artist Group
+-------------------------------------------------------------------------------*/
+
+#page_home .artistlist p {
+	margin-right:140px;
+}
+
+#page_home .artistlist ul {
+	margin: 0 100px;
+	margin-top:30px;
+	padding: 0;	
+	width:342px;
+}
+
+#page_home .artistlist ul li {
+		float: left;
+		display: block;
+		border: 4px solid transparent;
+		margin: 3px;
+		-webkit-border-radius:10px;
+		-moz-border-radius:10px;
+		border-radius:10px;
+		width:100px;
+}
+
+
+#page_home .artistlist ul li.selected {
+		border: 4px solid #B10008;
+}
+
+#page_home .artistlist img {
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	display: block;
+	width: 100%;
+}
+
+#page_home #sidebar .artistlist ul{
+	margin: 0;
+}
+
+#page_artists .artistlist h3{
+	font-size: 1.2em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top: 1px dotted #333;
+	color: #BA7415;
+}
+
+#page_artists .artistlist p{
+	padding-bottom: 5px;
+}
+
+#page_artists .artistlist img {
+	width:100px;
+	float: right;
+	margin-left: 10px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	margin-bottom: 10px;
+}
+
+.artistlist img.hidden {
+	opacity: 0;
+	display: none;
+}
+
+.artistlist img.faded {
+	opacity: .5;
+}
+
+.artistlist img.pulse {
+	-webkit-animation: pulse 1000ms infinite ease-in;
+}
+
+.artistlist img.rotate {
+	-webkit-animation: rotate 2000ms infinite;
+}
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(1);
+	}
+	30% {
+		-webkit-transform: scale(1.2);
+	}
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+
+		
+
+
+
+
+
+/* artgroup
+-------------------------------------------------------------------------------*/
+
+#sidebar .pixgrid {
+	width: 330px;
+}
+
+#sidebar .pixgrid .link {
+	width: 320px;
+	margin-right:0px;
+}
+
+#sidebar .pixgrid ul {
+	margin-top:30px;
+	padding: 0;	
+}
+
+#sidebar .pixgrid ul li {
+		float: left;
+		padding:0 10px 10px 0;
+}
+
+#sidebar .pixgrid img {
+	width:100px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+
+#sidebar #artlist img {
+	cursor: pointer;
+}
+
+
+
+/* schedule
+-------------------------------------------------------------------------------*/
+
+.dayinfo {
+	margin-top: 25px;
+}
+
+#main .textinfo h5, #main .textinfo h6, #main .textinfo p {
+	margin: 0;
+	margin: 0 30px;
+}
+
+.schedule li {
+	padding-top: 20px;	
+}
+
+.schedule h3 {
+	border-top: 1px solid #333;
+	padding-top: 1px;
+	color: #b20000;
+}
+
+.schedule h4 {
+	font: normal 1.7em/1.5em "Droid Sans", Arial, Helvetica, Geneva, sans-serif;
+	color: #84379D;
+}
+
+.schedule h5 {
+	font: normal 1.3em "Droid Serif", serif;
+	margin: 0;
+	color: #BA7415;
+}
+
+.schedule h6 {
+	font: normal .9em/1.5em "Droid Sans", Arial, Helvetica, Geneva, sans-serif;
+	color: #777;
+}
+
+.schedule img {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	width:130px;
+	float: left;
+	margin-left: 70px;
+}
+
+.schedule .textinfo {
+	float: left;
+	width: 400px;
+}
+
+.schedule .textinfo p {
+	padding-left: -70px;
+}
+
+/* Venue/Travel
+-------------------------------------------------------------------------------*/
+#hotellist li {
+	margin-bottom: 20px;
+}
+
+#hotellist li h3 {
+	margin-bottom: 5px;
+	margin-top: 20px;
+	border-top: 1px dotted #333;;
+	padding-top: 10px;
+	color: #BA7415;
+	font-size: 1.3em;
+}
+
+#hotellist img {
+	float: left;
+	margin-right: 20px;
+	padding-left:70px;
+	padding-top:15px
+}
+
+
+/* Register
+-------------------------------------------------------------------------------*/
+
+form {
+	font-family: 'Droid Sans', helvetica, arial, sans-serif;
+	font-weight: bold;
+}
+
+label, .label {
+	color: #555;
+	display: block;
+	margin-left: 20px;
+	margin-top:  20px;
+}
+
+input, textarea, select {
+	width: 80%;
+	display: block;
+	margin-left: 20px;
+	margin-top: 5px;;
+}
+
+input[type="radio"] {
+	display: inline;
+	width: auto;
+}
+
+ label.inline {
+ 	display: inline;
+ 	font-weight: normal;
+ 	margin: 10px;
+ 	width: auto;
+ }
+
+textarea {
+	height: 200px;
+}
+
+button {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+
+
+/* Exceptions
+-------------------------------------------------------------------------------*/
+
+#thevenue p img {
+	float: left;
+	padding-right:20px;
+}
