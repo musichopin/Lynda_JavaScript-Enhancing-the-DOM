@@ -20,7 +20,7 @@
 			myOverlay.style.backgroundColor = 'rgba(0,0,0,0.7)';
 
 			//resize and position overlay
-			myOverlay.style.width = window.innerWidth + 'px';
+			myOverlay.style.width = window.innerWidth + 'px'; // px shud be adjacent
 			myOverlay.style.height = window.innerHeight + 'px';
 			myOverlay.style.top = window.pageYOffset + 'px';
 			myOverlay.style.left = window.pageXOffset + 'px';
